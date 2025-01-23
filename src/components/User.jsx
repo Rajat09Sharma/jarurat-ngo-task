@@ -16,7 +16,7 @@ export default function User({ user }) {
                     <p className="card-text">📞:- {user.phone}</p>
                     <p className="card-text">🏠:- {user.address.city},{user.address.street}</p>
                     <div className='text-center'>
-                        <Link className="btn btn-color" to={`/users/${user._id}`}>View Details</Link>
+                        <Link className="btn btn-color" to={`${user._id}`}>View Details</Link>
                     </div>
                 </div>
             </div>
