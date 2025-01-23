@@ -11,9 +11,7 @@ import ErrorBlock from "../components/ErrorBlock";
 export default function UserDetailPage() {
   const { user } = useLoaderData();
 
-  const position = [51.505, -0.09]
-  let imgSrc = `https://api.dicebear.com/9.x/micah/svg?seed=${user.username}&backgroundColor=fafafa`;
-
+  const position = [51.505, -0.09];
   return (
     <div className="user-deatils padding">
       <h2>User Details</h2>
@@ -28,7 +26,7 @@ export default function UserDetailPage() {
               <div className="card mt-5 mx-auto">
                 <div className="row ">
                   <div className="col-lg-4">
-                    <img src={imgSrc} className="card-img-top" alt={user.username} />
+                    <img src={`https://api.dicebear.com/9.x/micah/svg?seed=${user.username}&backgroundColor=fafafa`} className="card-img-top" alt={user.username} />
                   </div>
                   <div className="col-lg-8">
                     <div className="card-body">
