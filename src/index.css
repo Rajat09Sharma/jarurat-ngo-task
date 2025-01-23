@@ -1,0 +1,134 @@
+body {
+    margin: 0;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+        'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+        sans-serif;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    background: #222c31;
+    color: #d9e2f1;
+}
+
+
+.padding {
+    padding: 5% 7%;
+}
+
+/* navbar */
+
+.navbar-brand,
+.nav-item,
+.nav-link {
+    color: #fff;
+}
+
+.nav-link.active {
+    color: #e30d7c !important;
+}
+
+.nav-link:hover {
+    color: #d9e2f1 !important;
+}
+
+/* intro section */
+.intro-section-container {
+    padding: 5% 7%;
+    text-align: center;
+    margin: 50px 0;
+}
+
+/* header section */
+
+.header h1 {
+    /* font-size: 1.5rem; */
+    color: #fff;
+    text-shadow: 0 2px 8px rgba(0, 0, 0, 0.26);
+}
+
+
+/* users section */
+.users {
+    padding: 5% 7%;
+    background-color: #111d32;
+}
+
+.card-body {
+    background-color: #222c31;
+    color: #fff;
+    height: 100%;
+}
+
+.card-img-top {
+    height: 100%;
+}
+
+.card-text {
+    margin: 20px 0;
+}
+
+.bg-placeholder-color {
+    background-color: #e30d7c;
+}
+
+/* user-deatils section */
+.user-deatils .card {
+    width: 65%;
+}
+
+/* new user section */
+.form-actions {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    gap: 2rem;
+}
+
+/* modal section */
+.modal {
+    margin: auto;
+    padding: 2rem;
+    height: fit-content;
+    width: 30rem;
+    background: #e2e5eb;
+    border: none;
+    border-radius: 6px;
+    z-index: 100;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.26);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.modal::backdrop {
+    height: 100vh;
+    width: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    position: fixed;
+    top: 0;
+    left: 0;
+}
+
+
+/* button */
+.btn-color {
+    background-color: #e30d7c;
+    color: #fff;
+    transition: all 0.3s ease-out;
+}
+
+.btn-color:hover {
+    background-color: #fff;
+    color: #e30d7c;
+    cursor: pointer;
+}
+
+/* leaflet */
+.leaflet-container {
+    height: 500px;
+}
+
+@media (max-width:960px) {
+    .user-deatils .card {
+        width: 100%;
+    }
+}
