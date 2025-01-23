@@ -18,13 +18,14 @@ const usersSlice = createSlice({
             const searchTerm = action.payload.searchTerm;
             console.log(searchTerm);
             if (searchTerm == "") {
-                state.users = fetchedUsers
+                state.users =JSON.parse(localStorage.getItem("users"))
+            } else {
+                const searchedUsersList = state.users.filter(user => {
+                    const searchableText = `${user.username} ${user.name} ${user.email}  ${user.address.city} ${user.address.street}`;
+                    return searchableText.toLowerCase().includes(searchTerm.toLowerCase());
+                })
+                state.users = [...searchedUsersList]
             }
-            const searchedUsersList = state.users.filter(user => {
-                const searchableText = `${user.username} ${user.name} ${user.email}  ${user.address.city} ${user.address.street}`;
-                return searchableText.toLowerCase().includes(searchTerm.toLowerCase());
-            })
-            state.users = [...searchedUsersList]
         }
     }
 });
